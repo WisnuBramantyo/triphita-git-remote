@@ -2,38 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Room;
+use App\Models\Rooms;
 use App\Models\Hotel;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {
-    public function search(Request $request)
+    public function searchRoom(Request $request)
     {
         // Debugging: Check what inputs are being received
         // dd($request->all());
     
         // Your query logic continues here...
-        $query = Destination::query();
+        $query = Rooms::query();
 
-        if ($request->filled('hotel')) {
-            $query->where('name', 'like', '%' . $request->destination . '%');
+        if ($request->filled('id')) {
+            $query->where('id', 'like', '%' . $request->id . '%');
         }
-        if ($request->filled('duration')) {
-            $query->where('duration', '>=', (int) $request->duration); // Using '>=' for matching longer tours
+        if ($request->filled('room_type')) {
+            $query->where('room_type', 'like', '%'. $request->room_type); // Using '>=' for matching longer tours
         }
         if ($request->filled('price')) {
             $query->where('price', '>=', (float) $request->price);
         }
-        if ($request->filled('adults')) {
-            $query->where('adults', '>=', (int) $request->adults);
+        if ($request->filled('facilities')) {
+            $query->where('facilities', '>=', $request->facilities);
         }
-        if ($request->filled('children')) {
-            $query->where('children', '>=', (int) $request->children);
+        if ($request->filled('link')) {
+            $query->where('link', '>=', $request->link);
         }
     
-        $destinations = $query->get();
+        $detail = $query->get();
     
-        return view('welcome', compact('tours'));
+        return view('booking-detail', compact('detail'));
+        // return Rooms::find($id);
     }
 }

@@ -24,16 +24,13 @@ class HotelController extends Controller
         if ($request->filled('price')) {
             $query->where('price', '>=', (float) $request->price);
         }
-        if ($request->filled('adults')) {
-            $query->where('adults', '>=', (int) $request->adults);
-        }
-        if ($request->filled('children')) {
-            $query->where('children', '>=', (int) $request->children);
+        if ($request->filled('room')) {
+            $query->where('room', '>=', (int) $request->rooms);
         }
     
         $hotels = $query->get();
     
-        return view('welcome', compact('hotels'));
+        return view('hotel', compact('hotels'));
 
     }
 }
