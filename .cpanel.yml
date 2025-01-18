@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/triphita/public_html/
+    - cd /home/triphita/triphita
+    - /usr/bin/rsync -Paz --exclude='*/.git*' --exclude='storage/*' --exclude='node_modules/*' --exclude='.env' --exclude='vendor/*' public/* $DEPLOYPATH --delete
+

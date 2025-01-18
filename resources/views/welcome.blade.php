@@ -29,17 +29,19 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light position-sticky" id="ftco-navbar">
 		<div class="container">
+			{{-- Logo --}}
 			<a class="navbar-brand" href="/">Triphita<span>Eco Tours and Hotels</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 
+			{{-- Menu --}}
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="destination" class="nav-link">Tours</a></li>
-					<li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
+					<li class="nav-item"><a href="hotel" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 				</ul>
@@ -48,6 +50,7 @@
 	</nav>
 	<!-- END nav -->
 	
+	{{-- Hero --}}
 	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
@@ -64,6 +67,7 @@
 		</div>
 	</div>
 
+	{{-- Search --}}
 	<section class="ftco-section ftco-no-pb ftco-no-pt">
 		<div class="container">
 			<div class="row">
@@ -83,13 +87,13 @@
 								<div class="tab-content" id="v-pills-tabContent">
 									{{-- Hotel Menu --}}
 									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-                                        <form action="{{ route('search') }}" method="GET" class="search-property-1">
+                                        <form action="{{ route('hotel.search') }}" method="GET" class="search-property-1">
 										{{-- <form action="{{ route('destination.search') }}" method="GET" class="search-property-1"> --}}
     
 											<div class="row no-gutters">
 												<div class="col-md d-flex">
 													<div class="form-group p-4 border-0">
-														<label for="hotel">Hotel Destination</label>
+														<label for="hotel">Destination</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
 															<input type="text" class="form-control" id="hotel" name="hotel" value="{{ request('hotel') }}" placeholder="Search hotel">
@@ -97,25 +101,7 @@
 														</div>
 													</div>
 												</div>
-												{{-- <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="duration">Duration</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                <select id="duration" name="duration" class="form-control">
-                                                                    <option value="2">2 hours</option>
-                                                                    <option value="3">3 hours</option>
-                                                                    <option value="4">4 hours</option>
-                                                                    <option value="5">5 hours</option>
-                                                                    <option value="10">10 hours</option>
-																	<option value="12">12 hours</option>
-                                                                    <option value="24">1 day</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
+
 												<div class="col-lg d-flex">
 													<div class="form-group p-4">
 														<label for="#">Check-in date</label>
@@ -152,62 +138,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-												{{-- <div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Price Limit</label>
-														<div class="form-field">
-															<div class="select-wrap">
-																<div class="icon"><span class="fa fa-chevron-down"></span></div>
-																<select name="price" id="price" class="form-control">
-																	<option value="100">100,000</option>
-																	<option value="200">200,000</option>
-																	<option value="300">200,000</option>
-																	<option value="400.00">400,000</option>
-																	<option value="500">500,000</option>
-																	<option value="800">800,000</option>
-																	<option value="1000">1,000,000</option>
-																	<option value="1200">2,000,000</option>
-																</select>
-															</div>
-														</div>
-													</div>
-												</div> --}}
-												{{-- <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="adult">Adult</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                <select id="adult" name="adult" class="form-control">
-                                                                    <option value="1" {{ request('adults') == 1 ? 'selected' : '' }}>1</option>
-                                                                    <option value="2" {{ request('adults') == 2 ? 'selected' : '' }}>2</option>
-                                                                    <option value="3" {{ request('adults') == 3 ? 'selected' : '' }}>3</option>
-                                                                    <option value="4" {{ request('adults') == 4 ? 'selected' : '' }}>4</option>
-                                                                    <option value="5" {{ request('adults') == 5 ? 'selected' : '' }}>5</option>
-                                                                    <option value="10" {{ request('adults') == 10 ? 'selected' : '' }}>More than 5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="children">Children</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                <select id="children" name="children" class="form-control">
-                                                                    <option value="1" {{ request('children') == 1 ? 'selected' : '' }}>1</option>
-                                                                    <option value="2" {{ request('children') == 2 ? 'selected' : '' }}>2</option>
-                                                                    <option value="3" {{ request('children') == 3 ? 'selected' : '' }}>3</option>
-                                                                    <option value="4" {{ request('children') == 4 ? 'selected' : '' }}>4</option>
-                                                                    <option value="5" {{ request('children') == 5 ? 'selected' : '' }}>5</option>
-                                                                    <option value="10" {{ request('children') == 10 ? 'selected' : '' }}>More than 5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
+												
 												<div class="col-md d-flex">
 													<div class="form-group d-flex w-100 border-0">
 														<div class="form-field w-100 align-items-center d-flex">
@@ -222,7 +153,7 @@
 									{{-- Tour Menu --}}
 									<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
 										{{-- <form action="#" class="search-property-1"> --}}
-											<form action="{{ route('search') }}" method="GET" class="search-property-1">
+											<form action="{{ route('destination.search') }}" method="GET" class="search-property-1">
 											<div class="row no-gutters">
 												<div class="col-lg d-flex">
 													<div class="form-group p-4 border-0">
@@ -252,50 +183,6 @@
 														</div>
 													</div>
 												</div>
-												{{-- <div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Price Limit</label>
-														<div class="form-field">
-															<div class="select-wrap">
-																<div class="icon"><span class="fa fa-chevron-down"></span></div>
-																<select name="" id="" class="form-control">
-																	<option value="">$100</option>
-																	<option value="">$10,000</option>
-																	<option value="">$50,000</option>
-																	<option value="">$100,000</option>
-																	<option value="">$200,000</option>
-																	<option value="">$300,000</option>
-																	<option value="">$400,000</option>
-																	<option value="">$500,000</option>
-																	<option value="">$600,000</option>
-																	<option value="">$700,000</option>
-																	<option value="">$800,000</option>
-																	<option value="">$900,000</option>
-																	<option value="">$1,000,000</option>
-																	<option value="">$2,000,000</option>
-																</select>
-															</div>
-														</div>
-													</div>
-												</div>
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="rooms">Room</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                <select id="rooms" name="rooms" class="form-control">
-                                                                    <option value="">1</option>
-                                                                    <option value="">2</option>
-                                                                    <option value="">3</option>
-                                                                    <option value="">4</option>
-                                                                    <option value="">5</option>
-                                                                    <option value="">More than 5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
 
 												<div class="col-lg d-flex">
 													<div class="form-group d-flex w-100 border-0">
@@ -456,7 +343,7 @@
 								<span class="price">$550/person</span>
 							</a>
 							<div class="text p-4">
-								<h3><a href="#">Banaue Rice Terraces</a></h3>
+								<h3><a href="#">Test 1st Accomodation</a></h3>
 								<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
 								<ul>
 									<li><span class="flaticon-shower"></span>2</li>
