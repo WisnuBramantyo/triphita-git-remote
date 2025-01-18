@@ -29,13 +29,11 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light position-sticky" id="ftco-navbar">
 		<div class="container">
-			{{-- Logo --}}
 			<a class="navbar-brand" href="/">Triphita<span>Eco Tours and Hotels</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 
-			{{-- Menu --}}
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
@@ -50,13 +48,11 @@
 	</nav>
 	<!-- END nav -->
 	
-	{{-- Hero --}}
 	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
 				<div class="col-md-7 ftco-animate">
-					{{-- <span class="subheading">Welcome to Triphita</span> --}}
 					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
 					<p class="caps">Travel to the any corner of the world, without going around in circles</p>
 				</div>
@@ -67,7 +63,6 @@
 		</div>
 	</div>
 
-	{{-- Search --}}
 	<section class="ftco-section ftco-no-pb ftco-no-pt">
 		<div class="container">
 			<div class="row">
@@ -343,7 +338,7 @@
 								<span class="price">$550/person</span>
 							</a>
 							<div class="text p-4">
-								<h3><a href="#">Test 1st Accomodation</a></h3>
+								<h3><a href="#">Banaue Rice Terraces</a></h3>
 								<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
 								<ul>
 									<li><span class="flaticon-shower"></span>2</li>
