@@ -223,17 +223,22 @@
 				</div>
 				<div class="row d-flex">
 					<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-						<div class="w-100" style="text-align: justify;">
-							<p>Our story begins on the paradise island of Bali, a land once celebrated for its rich culture, untouched nature, and vibrant traditions. From its breathtaking beaches to its mesmerizing dances, intricate crafts, and the warm smiles of its people, Bali was a true haven for the soul. But time has taken its toll. Overtourism has stripped away much of this romance. What was once a lush paradise is now dotted with concrete jungles, plagued by traffic jams, and burdened by mounting waste. The beauty that enchanted the world is fading, and the magic of Bali risks becoming a memory.</p>
-							<p>At Triphita, we believe it's not too late. We see an opportunity to reclaim the paradise that once was, step by step. Our vision begins with revolutionizing the way people travel and stay. By embracing sustainability, we're paving the way for a new era of conscious tourism that honors the land, respects its people, and protects its future. Join us in our mission to restore Bali to its natural glory. Together, we can rewrite the story of this beloved island—creating a blueprint for sustainable tourism that, one day, can inspire and spread to the rest of the world..</p>
+						<div class="w-100" style="text-align: justify; font-size: 1.1em;">
+							<p>Our story begins on the paradise island of Bali, a land once celebrated for its rich culture, untouched nature, and vibrant traditions. From its breathtaking beaches to its mesmerizing dances, intricate crafts, and the warm smiles of its people, Bali was a true haven for the soul. </p>
+							<p>But time has taken its toll. Overtourism has stripped away much of this romance. What was once a lush paradise is now dotted with concrete jungles, plagued by traffic jams, and burdened by mounting waste. The beauty that enchanted the world is fading, and the magic of Bali risks becoming a memory.</p>
+							<p>At Triphita, we believe it's not too late. We see an opportunity to reclaim the paradise that once was, step by step. Our vision begins with revolutionizing the way people travel and stay. By embracing sustainability, we're paving the way for a new era of conscious tourism that honors the land, respects its people, and protects its future. </p>
+							<p>Join us in our mission to restore Bali to its natural glory. Together, we can rewrite the story of this beloved island—creating a blueprint for sustainable tourism that, one day, can inspire and spread to the rest of the world..</p>
 							<p><a href="#" class="btn btn-primary py-3 px-4">Search Accommodation</a></p>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+						<!-- Services Section - Displays Sustainable Accommodation and Tours -->
+						<div class="row flex-column">
+							<div class="col-md-12 mb-4">
 								<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-paragliding"></span>
+									</div>
 									<div class="media-body">
 										<h3 class="heading mb-3">Sustainable Accommodation (Beta)</h3>
 										<p>Stays in our curated eco-friendly accommodation, designed to blend comfort, sustainability, and local culture seamlessly.</p>
@@ -241,9 +246,13 @@
 									</div>
 								</div>      
 							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+
+							<!-- Sustainable Tours Box -->
+							<div class="col-md-12">
 								<div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-route"></span>
+									</div>
 									<div class="media-body">
 										<h3 class="heading mb-3">Sustainable Tours (Coming Soon)</h3>
 										<p>Discover the beauty of nature and the richness of local culture with our fun and immersive tours.</p>
