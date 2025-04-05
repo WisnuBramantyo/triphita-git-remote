@@ -284,7 +284,8 @@
 						<div class="item">
 							<div class="project-destination">
 								<!-- Image with Hover Text -->
-								<a class="img" style="background-image: url('/images/sustainable-materials.webp');">
+								<a class="img" style="background-image: url('/images/services-1.jpg');">
+									{{-- <a class="img" style="background-image: url('/images/sustainable-materials.webp');"> --}}
 									<div class="text">
 										<!-- Title Always Visible -->
 										<h3>Clean Energy and Transportation</h3>
