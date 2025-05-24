@@ -91,8 +91,6 @@
 				<div class="col-md-12">
 					<div class="ftco-search">
 						<!-- Remove the existing tab structure and just keep the Lodgify search bar -->
-						
-
 						<style>
 							:root {
 							  --ldg-psb-background: #ffffff;
@@ -147,8 +145,6 @@
 							data-new-tab="false"
 							data-version="stable"
 						  ></div>
-
-
 						  
 						<script>
 							document.addEventListener('DOMContentLoaded', function() {
@@ -159,6 +155,7 @@
 							});
 						</script>
 					</div>
+					{{-- End of Lodgify search bar --}}
 				</div>
 			</div>
 		</div>
