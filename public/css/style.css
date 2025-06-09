@@ -4,7 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -319,6 +319,49 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem; }
+
+/* Rooms Page Style */
+.carousel-inner img {
+  width: 100%;
+  height: 50vh; /* Scales dynamically for mobile */
+  object-fit: cover; /* Ensures images fit consistently */
+}
+
+.room img {
+  width: 100%;
+  max-height: 200px; /* Limit image height */
+  object-fit: cover;
+}
+
+.room-list h2 {
+  text-align: center;
+}
+
+.container-rooms-images {
+  margin-bottom: 2rem; /* Add spacing below the slider */
+}
+
+@media (max-width: 768px) {
+  .room {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .room .row {
+      flex-direction: column;
+  }
+
+  .room img {
+      margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inner img {
+      height: 30vh; /* Smaller height for smaller devices */
+  }
+}
+/* End of Rooms Page Style */
 
 .lead {
   font-size: 1.25rem;
@@ -5182,8 +5225,7 @@ a.close.disabled {
     position: absolute;
     display: block;
     width: 1rem;
-    height: 0.5rem;
-    margin: 0 0.3rem; }
+    height: 0.5rem; }
     .popover .arrow::before, .popover .arrow::after {
       position: absolute;
       display: block;
@@ -8386,7 +8428,7 @@ h1, h2, h3, h4, h5,
   z-index: 3; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      background: #ffffff !important;
       position: relative;
       top: 0;
       padding-top: 0;
@@ -8481,7 +8523,7 @@ h1, h2, h3, h4, h5,
         color: #f15d30; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #000000 !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8558,6 +8600,13 @@ h1, h2, h3, h4, h5,
       padding-top: 1rem;
       padding-bottom: 1rem; }
 
+
+#search-section {
+  margin-top: 0px; /* or more depending on navbar height */
+  position: relative;
+  z-index: 1; /* lower than the navbar */
+}
+
 .navbar-brand {
   font-weight: 700;
   font-size: 24px;
@@ -8571,25 +8620,68 @@ h1, h2, h3, h4, h5,
     letter-spacing: 1px;
     text-transform: uppercase; }
 
-.hero-wrap {
-  width: 100%;
-  height: 100%;
-  position: inherit;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed; }
-  .hero-wrap .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: .3;
-    background: #000000; }
-  .hero-wrap.hero-wrap-2 .overlay {
-    width: 100%; }
+    .hero-wrap {
+      width: 100%;
+      height: 400px; /* Default height for desktop */
+      position: relative;
+      background-image: url('/images/bg_5.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: scroll;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .hero-wrap .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      opacity: 0.3;
+      background: #000000;
+      z-index: 1;
+    }
+    
+    .hero-wrap .container {
+      padding-bottom: 5rem; /* Add space at the bottom of hero text */
+      z-index: 2;
+      position: relative;
+    }
+    
+    .hero-wrap h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+    
+    .hero-wrap p {
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    
+    /* ✅ Responsive styles for mobile */
+    @media (max-width: 768px) {
+      .hero-wrap {
+        height: 250px; /* Smaller banner height for mobile */
+      }
+    
+      .hero-wrap h1 {
+        font-size: 1.75rem; /* Adjust font sizes */
+        margin-bottom: 0.5rem;
+      }
+    
+      .hero-wrap p {
+        font-size: 1rem;
+      }
+    }
+    
+
+
+/* End of Hero Section */
 
 .slider-text {
   position: relative; }
@@ -8925,7 +9017,7 @@ h1, h2, h3, h4, h5,
     bottom: 20px;
     right: -5px;
     display: inline-block;
-    background: #f15d30;
+    background: #3cb372;
     padding: 4px 5px 4px 15px;
     border-radius: 20px 0 0 20px;
     color: #fff;
@@ -8947,7 +9039,7 @@ h1, h2, h3, h4, h5,
 
 .project-destination:hover .text span {
   padding-right: 20px;
-  background: #f15d30; }
+  background: #3cb372; }
 
 .project-wrap {
   margin-bottom: 30px; }
@@ -9196,6 +9288,12 @@ textarea.form-control {
   @media (max-width: 767.98px) {
     .ftco-section {
       padding: 6em 0; } }
+
+.story-section {     
+  padding-top: 2em;
+  padding-bottom: 2em !important;
+  margin-bottom: 0 !important;
+}
 
 .ftco-no-pt {
   padding-top: 0 !important; }
