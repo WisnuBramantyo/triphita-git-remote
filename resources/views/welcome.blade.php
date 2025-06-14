@@ -26,6 +26,8 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<style>
 		.project-destination .img:hover .hover-text {
 			display: block !important;
@@ -70,24 +72,27 @@
 		</div>
 	</nav>
 	<!-- END nav -->
-
-	<div class="hero-wrap">
+	
+	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
-		  <div class="row justify-content-center align-items-center" style="height: 100%;">
-			<div class="col-md-10 text-center">
-			  <h1 class="mb-2">Discover Your Favorite Place with Us</h1>
-			  <p>Travel to the corner of the world, sustainably</p>
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-md-7 ftco-animate">
+					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
+					<p class="caps">Travel to the corner of the world, sustainably</p>
+				</div>
 			</div>
-
-		  </div>
 		</div>
-	  </div>
+	</div>
+
 	<section class="ftco-section ftco-no-pb ftco-no-pt" id="search-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="ftco-search">
+						<!-- Remove the existing tab structure and just keep the Lodgify search bar -->
+						
+
 						<style>
 							:root {
 							  --ldg-psb-background: #ffffff;
@@ -142,6 +147,8 @@
 							data-new-tab="false"
 							data-version="stable"
 						  ></div>
+
+
 						  
 						<script>
 							document.addEventListener('DOMContentLoaded', function() {
@@ -157,7 +164,7 @@
 		</div>
 	</section>
 
-	<section class="story-section">
+	<section class="ftco-section services-section">
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -226,7 +233,7 @@
 						<div class="item">
 							<div class="project-destination">
 								<!-- Image with Hover Text -->
-								<a class="img" style="background-image: url('/images/clean-energy-and-transportation.jpg');">
+								<a class="img" style="background-image: url('/images/sustainable-materials.webp');">
 									<div class="text">
 										<!-- Title Always Visible -->
 										<h3>Clean Energy and Transportation</h3>
@@ -240,7 +247,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/water-conservation-and-management.jpg');">
+								<a class="img" style="background-image: url('images/energy-efficiency.webp');">
 									<div class="text">
 										<h3>Water Conservation and Management</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -252,7 +259,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/sustainable-food-systems.jpg');">
+								<a class="img" style="background-image: url('images/water-conservation.png');">
 									<div class="text">
 										<h3>Sustainable Food Systems</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -264,7 +271,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/waste-reduction-and-recycling.jpg');">
+								<a class="img" style="background-image: url('images/waste-reduction.png');">
 									<div class="text">
 										<h3>Waste Reduction and Recycling</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -276,7 +283,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/sustainable-materials-and-products.jpg');">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>Sustainable Materials and Products</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -288,7 +295,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/people-and-community-wellbeing.jpg');">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>People and Community Well-being</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -300,7 +307,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/cultural-preservation-and-enrichment.jpg');">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>Cultural Preservation and Enrichment</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -312,7 +319,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/sustainable-governance-and-policies.jpg');">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>Sustainable Governance and Policies</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -442,12 +449,12 @@
 			</div>
 		</div>
 	</section>	
-	<section class="ftco-section ftco-about img"style="background-image: url(images/kkc-welcome.jpg);">
+	<section class="ftco-section ftco-about img"style="background-image: url(images/bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container py-md-5">
 			<div class="row py-md-5">
 				<div class="col-md d-flex align-items-center justify-content-center">
-					<a href="https://www.youtube.com/watch?v=A5-jpCY-yvI" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
 						<span class="fa fa-play"></span>
 					</a>
 				</div>
